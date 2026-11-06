@@ -1,0 +1,32 @@
+{
+  "name": "n8n-nodes-sempera",
+  "version": "0.1.0",
+  "description": "n8n community nodes for Sempera: place calls, send texts, read calls and agents, and trigger workflows from signed webhooks",
+  "license": "MIT",
+  "author": "Sempera Labs, Inc. <hello@sempera.org>",
+  "homepage": "https://github.com/Sempera-AI/n8n-nodes-sempera#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/Sempera-AI/n8n-nodes-sempera.git" },
+  "bugs": { "url": "https://github.com/Sempera-AI/n8n-nodes-sempera/issues" },
+  "keywords": ["n8n-community-node-package", "n8n", "sempera", "voice", "phone", "ai"],
+  "engines": { "node": ">=20" },
+  "main": "index.js",
+  "files": ["index.js", "credentials", "nodes", "README.md"],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "credentials/SemperaApi.credentials.js",
+      "credentials/SemperaWebhookApi.credentials.js"
+    ],
+    "nodes": [
+      "nodes/sempera/Sempera.node.js",
+      "nodes/sempera/SemperaTrigger.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "publishConfig": { "access": "public" }
+}
