@@ -8,11 +8,12 @@ They call the public API at `https://api.sempera.org` (contract: [`/openapi.json
 
 ## Install
 
-In n8n: Settings, Community nodes, Install, and enter `n8n-nodes-sempera` (once the package is published). Self-hosted n8n can also install it from a clone of this repository:
+In n8n: Settings, Community nodes, Install, and enter `n8n-nodes-sempera`. Self-hosted n8n can also install it from npm or from a clone of this repository:
 
 ```bash
 cd ~/.n8n/custom        # create it if it does not exist
-npm install /path/to/n8n-nodes-sempera
+npm install n8n-nodes-sempera
+# or, from a clone: npm install /path/to/n8n-nodes-sempera
 ```
 
 Then restart n8n.
